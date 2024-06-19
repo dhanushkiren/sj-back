@@ -30,7 +30,7 @@ public class UserInfoService implements UserDetailsService {
 
     public String addUser(UserInfo userInfo) {
         userInfo.setPassword(encoder.encode(userInfo.getPassword()));
-        repository.save(userInfo);
+        System.out.println(repository.save(userInfo));
         return "User Added Successfully";
     }
 }
